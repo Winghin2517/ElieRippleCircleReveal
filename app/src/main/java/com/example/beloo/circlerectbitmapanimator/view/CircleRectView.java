@@ -1,3 +1,4 @@
+
 package com.example.beloo.circlerectbitmapanimator.view;
 
 import android.animation.Animator;
@@ -12,11 +13,9 @@ import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateInterpolator;
-import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 
 import com.example.beloo.circlerectbitmapanimator.R;

@@ -1,10 +1,10 @@
 package com.example.beloo.circlerectbitmapanimator;
 
 import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.transition.Transition;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.animation.AccelerateDecelerateInterpolator;
 
 import com.example.beloo.circlerectbitmapanimator.support.CircleToRectTransition;
 import com.example.beloo.circlerectbitmapanimator.view.CircleRectView;
@@ -17,10 +17,12 @@ public class SecondActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            Transition transition = new CircleToRectTransition();
-            transition.setDuration(1500);
-            getWindow().setSharedElementEnterTransition(transition);
-            getWindow().setSharedElementExitTransition(new CircleToRectTransition().setDuration(1500));
+
+            CircleToRectTransition circleToRectTransition = new CircleToRectTransition();
+            getWindow().setSharedElementEnterTransition(circleToRectTransition
+                            .setInterpolator(new AccelerateDecelerateInterpolator())
+                            .setDuration(600));
+/*            getWindow().setSharedElementExitTransition(new CircleToRectTransition().setDuration(1500));*/
         }
 
         super.onCreate(savedInstanceState);

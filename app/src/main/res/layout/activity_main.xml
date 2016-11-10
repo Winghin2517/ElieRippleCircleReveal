@@ -19,11 +19,13 @@
 
     <com.example.beloo.circlerectbitmapanimator.view.CircleRectView
         android:id="@+id/circleView"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:transitionName="@string/circle"
-        app:circleRadius="25dp"
-        android:src="@drawable/picture"
+        style="@style/SelectableItemBackground"
+        app:circleRadius="80dp"
+        android:src="@drawable/snow"
+        android:clickable="true"
         android:layout_centerInParent="true"
         android:scaleType="centerCrop"
         />
